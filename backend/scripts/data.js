@@ -2,6 +2,7 @@ db.movies.createIndex(
   { title: 1 },
   { collation: { locale: "en", strength: 2 } }
 );
+
 db.movies.createIndex({ title: "text" });
 
 db.movies.insertMany([

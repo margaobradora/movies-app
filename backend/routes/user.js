@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express");
+const userController = require("../controllers/user");
+const router = express.Router();
+const { isAllowed } = require("../middleware/authorization");
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get("/favorites", isAllowed, userController.getAllFavorites);
+router.post("/favorites", isAllowed, userController.addToFavorites);
+router.delete("/favorites/:id", isAllowed, userController.deleteFavorite);
 
 module.exports = router;
