@@ -1,0 +1,38 @@
+.grid {
+  margin: 0 5rem 0 5rem;
+  padding: 0;
+
+  &__movies {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 30px;
+    padding: 10px 0 10px 0;
+    justify-content: center;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__sort__icon {
+      margin-left: 10px;
+    }
+  }
+}
+
+// @media (max-width: 560px) {
+//   .grid__movies {
+//     grid-template-columns: 100%;
+//   }
+// }
+
+@media only screen and (max-width: 768px) {
+  .grid__movies {
+    display: block;
+    width: 100;
+    height: 100;
+    margin: 0;
+  }
+}

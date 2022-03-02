@@ -1,0 +1,85 @@
+@import "../index.scss";
+
+.container {
+  width: 360px;
+  padding: 10px 0 0;
+  margin: auto;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  padding: 45px;
+  text-align: center;
+}
+
+input {
+  margin-top: 10px;
+  background: #f5f5f5;
+  font-family: Limelight;
+  font-weight: 100;
+  font-size: 15px;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  &::placeholder {
+    font-family: Limelight;
+    font-weight: 100;
+    font-size: 15px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.input__message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.input__message a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+// @keyframes Gradient {
+//   0% {
+//     background-position: 0% 50%;
+//   }
+//   50% {
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
+
+.control {
+  margin-bottom: 30px;
+}
+
+.control label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.control input {
+  font-size: 16px;
+  padding: 4px 8px;
+  width: 200px;
+}
+
+.button {
+  margin-bottom: 30px;
+}

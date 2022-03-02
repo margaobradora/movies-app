@@ -1,0 +1,212 @@
+[
+    {
+      "category": "Action",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTI3NTQyMzU5M15BMl5BanBnXkFtZTcwMTM2MjgyMQ@@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Oldboy",
+      "plot": "After being kidnapped and imprisoned for fifteen years, Oh Dae-Su is released, only to find that he must find his captor in five days.",
+      "year": 2003,
+      "rating": 8.4
+    },
+    {
+      "category": "Drama",
+      "year": "2019",
+      "plot": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+      "title": "Parasite",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "rating": 8.6
+    },
+    {
+      "category": "Horror",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTkwOTQ4OTg0OV5BMl5BanBnXkFtZTgwMzQyOTM0OTE@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Train to Busan",
+      "plot": "While a zombie virus breaks out in South Korea, passengers struggle to survive on the train from Seoul to Busan.",
+      "year": 2016 ,
+      "rating": 7.6
+    },
+    {
+      "category":"Horror",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTE3N2IwNmMtOGE0Ny00NWFlLTliNmUtNjY3ODExYjgxNmUyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "The Host",
+      "plot": "A monster emerges from Seoul's Han River and begins attacking people. One victim's loving family does what it can to rescue her from its clutches.",
+      "year": 2006,
+      "rating":7.1
+    },
+    {
+      "category": "Crime",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOGViNTg4YTktYTQ2Ni00MTU0LTk2NWUtMTI4OTc1YTM0NzQ2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Memories of Murder",
+      "plot": "In a small Korean province in 1986, two detectives struggle with the case of multiple young women being found raped and murdered by an unknown culprit.",
+      "year": 2003,
+      "rating": 8.1
+    },
+    {
+      "category": "Drama",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjA4NDk2MzYxM15BMl5BanBnXkFtZTgwNzA4MDYyMDI@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "The Age of Shadows",
+      "plot": "Korean resistance fighters smuggle explosives to destroy facilities controlled by Japanese forces in this period action thriller.",
+      "year": 2016,
+      "rating": 7.1
+    },
+    {
+      "category": "Comedy",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWMzNTU3Y2UtYzc4NS00YWY5LWEwOWItMDg0ZmY3ZjYwYzE1XkEyXkFqcGdeQXVyNTI5NjIyMw@@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Miss Granny",
+      "plot": "A 74-year-old widow realizes she is becoming a burden on her family. She mysteriously regains her physical appearance from the age of 20.",
+      "year": 2014,
+      "rating": 7.2
+    },
+    {
+      "category": "Drama",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTQ1NTY3MTg4MV5BMl5BanBnXkFtZTgwOTUwOTE3MjE@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "The King and the Clown",
+      "plot": "Two clowns living in Korea's Chosun Dynasty get arrested for staging a play that satirizes the king. They are dragged to the palace and threatened with execution but are given a chance to save their lives if they can make the king laugh.",
+      "year": 2005,
+      "rating": 7.4
+    },
+    {
+      "category": "Comedy",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDgzZjNkMTUtNTdlOC00OGZiLWE2OGUtMzcyOWNiZmRmMzQxXkEyXkFqcGdeQXVyNDE2NjE1Njc@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Secretly Greatly",
+      "plot": "As a North Korean sleeper cell agent, Ryu-han infiltrates the South and assumes the role of a village idiot in a rural town. He observes the townsfolk and waits patiently for his mission.",
+      "year": 2013,
+      "rating":6.9
+    },
+    {
+      "category": "Action",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjRmNjc5MTYtYjc3My00ZjNiLTg4YjUtMTQ0ZTFkZmMxMDUzXkEyXkFqcGdeQXVyNDY5MTUyNjU@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "I saw the Devil",
+      "plot": "A secret agent exacts revenge on a serial killer through a series of captures and releases.",
+      "year": 2010,
+      "rating": 7.8
+    },
+    {
+      "category": "Action" ,
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTA5ZGE4ZTQtYjVjOS00MTllLTkwZWEtYzQ5NzljMWJkYWE4XkEyXkFqcGdeQXVyMTk0NTY2ODQ@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "A Taxi Driver",
+      "plot": "",
+      "year": 2017,
+      "rating": 7.9
+    },
+    {
+      "category": "Action",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTgzMTkxNjAxNV5BMl5BanBnXkFtZTgwMDU3MDE0MjE@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "The Man from Nowhere",
+      "plot": "A quiet pawnshop keeper with a violent past takes on a drug-and-organ trafficking ring in hope of saving the child who is his only friend.",
+      "year": 2010,
+      "rating": 7.8
+    },
+    {
+      "category": "Drama",
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2NhMjUwMDItYTg2YS00NDRlLWExNzQtMWZjMDJiOTIxODE5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "The Face Reader",
+      "plot": "",
+      "year": 2013,
+      "rating":6.8
+    },
+    {
+      "category": "Horror",
+      "poster": "https://m.media-amazon.com/images/M/MV5BODkwMTgxNjA2NF5BMl5BanBnXkFtZTgwMDc0OTcwOTE@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "The Wailing",
+      "plot": "Soon after a stranger arrives in a little village, a mysterious sickness starts spreading. A policeman, drawn into the incident, is forced to solve the mystery in order to save his daughter.",
+      "year": 2016,
+      "rating": 7.5
+    },
+    {
+      "category": "Horror",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzA4MGVkNjMtYWI5NC00YTQwLWJkZTUtOTdjYmI5OGE4ZTUwL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Thirst",
+      "plot": "Through a failed medical experiment, a priest is stricken with vampirism and is forced to abandon his ascetic ways.",
+      "year": 2009,
+      "rating": 7.1
+    },
+    {
+      "category": "Horror",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDMyNDE0ZmQtZTVhZC00M2Q1LTljNmUtYjFiNzljNGNjOTA3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "A Tale of Two Sisters",
+      "plot": "A family is haunted by the tragedies of deaths within the family.",
+      "year": 2003,
+      "rating": 7.2
+    },
+    {
+      "category": "Crime",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOWY3MGUyYmItZTZjOC00N2NlLWFmOWUtNWZkYWJiNDQ0NjhhXkEyXkFqcGdeQXVyNjQ4NTczMDE@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Inside Men",
+      "plot": "A former political henchman seeks out revenge for being dropped by a ruthless politician while a determined investigator tries to find proof of a connection between the two of them.",
+      "year": 2015,
+      "rating": 7.1
+    },
+    {
+      "category": "Drama",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTdkM2FhNTUtYWJkZi00MDQ3LWJhMjktZjg4N2VjZTU2MmZhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Poetry",
+      "plot": "A sixty-something woman, faced with the discovery of a heinous family crime and in the early stages of Alzheimer's disease, finds strength and purpose when she enrolls in a poetry class.",
+      "year": 2010,
+      "rating": 7.8
+    },
+    {
+      "category": "Drama",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWNmYjI1M2UtNDdkNi00MTgwLWFiZmYtODcxNWZhM2Y2NWFkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Burning",
+      "plot": "Jong-su bumps into a girl who used to live in the same neighborhood, who asks him to look after her cat while she's on a trip to Africa. When back, she introduces Ben, a mysterious guy she met there, who confesses his secret hobby.",
+      "year": 2018,
+      "rating": 7.5
+    },
+    {
+      "category": "Drama" ,
+      "poster": "https://m.media-amazon.com/images/M/MV5BNjllODRlODQtOTQzNC00N2NjLWIzZjctNDhjMmQ5MDAzYjc0XkEyXkFqcGdeQXVyMzY2MDk0MTk@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Io Island",
+      "plot": "An investor planning on developing a tourist resort begins an investigation into the legends of the mysterious Io Island in the hope of exploiting its unspoiled beauty.",
+      "year": 1977,
+      "rating": 6.7
+    },
+    {
+      "category": "Crime",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTQzMTg0NDA1M15BMl5BanBnXkFtZTgwODUzMTE0MjE@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Mother",
+      "plot": "A mother desperately searches for the killer who framed her son for a girl's horrific murder.",
+      "year": 2009,
+      "rating": 7.8
+    },
+    {
+      "category": "Horror",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzY2OTU0NTgtMGZiZC00M2Y5LThjZjQtOTcyNWNlZDdhMjZkXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Forgotten",
+      "plot": "When his abducted brother returns seemingly a different man with no memory of the past 19 days, Jin-seok chases after the truth behind the kidnapping.",
+      "year": 2017,
+      "rating": 7.5
+    },
+    {
+      "category": "Crime",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDUxNzI0OGYtZjUwOC00ZWY0LWFjZTEtN2Q0ZGE3ZjgzZWJmXkEyXkFqcGdeQXVyNjM0NDA5NDg@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "The Drug King",
+      "plot": "Set in Busan, South Korea during the 1970s, Lee Doo-sam builds an empire as a drug smuggler in the Busan underworld, while public prosecutor Kim In-goo attempts to take down Lee Doo-sam.",
+      "year": 2018,
+      "rating": 6.2
+    },
+    {
+      "category": "Drama",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTUyNTc3NTg3M15BMl5BanBnXkFtZTgwMzc1MTAzMjE@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "Silenced",
+      "plot": "Based on real events, this film depicts the story of a school for the hearing-impaired where young deaf students were sexually assaulted by the faculty members over a long period of time.",
+      "year": 2011,
+      "rating": 8.1
+    },
+    {
+      "category": "Crime",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzBmODdkMzItNTk0NS00MDc5LWFmZjgtNmNlZmNhMzFlMmQ3XkEyXkFqcGdeQXVyMTI3ODAyMzE2._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "3-Iron",
+      "plot": "A transient young man breaks into empty homes to partake of the vacationing residents' lives for a few days.",
+      "year": 2004,
+      "rating": 8.5
+    },
+    {
+      "category": "Drama",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTQzMDE4MzM4NV5BMl5BanBnXkFtZTcwOTMyNzYzMQ@@._V1_UX182_CR0,0,182,268_AL_.jpg.jpg",
+      "title": "The Bow",
+      "plot": "On a fishing boat at sea, a 60-year old man has been raising a girl since she was a baby. It is agreed that they will get married on her 17th birthday, and she is 16 now. They live a quiet and secluded life, renting the boat to day fishermen and practicing strange divination rites.",
+      "year": 2005,
+      "rating": 7.1
+    }
+    
+
+  ]

@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Roboto:wght@300&display=swap");
+
+body {
+  margin: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+}
+
+// FONTS
+:root {
+  $header-font: "Limelight";
+  $main-font: "Limelight";
+}
+
+// COLORS
+:root {
+  --main-color: #f8bb21;
+  --secondary-color: #1a1e25;
+  --light-color: #ffffff;
+}
+
+img {
+  border-radius: 15px;
+  border: 3px solid #2d2e35;
+  &:hover {
+    border: 3px solid #f8bb21;
+    color: var(--light-color);
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+
+  &:hover {
+    color: var(--light-color);
+  }
+}
+
+button {
+  text-transform: uppercase;
+  outline: 0;
+  background: var(--main-color);
+  width: 100%;
+  border: 1px var(--main-color) solid;
+  padding: 15px;
+  color: var (--light-color);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--main-color);
+    background-color: var(--light-color);
+    transition: background-color 0.4s ease;
+  }
+}

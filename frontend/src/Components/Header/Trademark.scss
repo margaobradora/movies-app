@@ -1,0 +1,44 @@
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px;
+
+  &__title {
+    font-size: 40px;
+    font-family: "Limelight";
+    color: var(--main-color);
+  }
+
+  &__logo {
+    margin-left: 30px;
+    height: 200px;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+// ANA
+
+// .brand {
+//   display: flex;
+//   align-items: center;
+//   justify-content: left;
+//   gap: 20px;
+
+//   &__title {
+//     font-size: 50px;
+//     font-family: "Lobster";
+
+//     a:hover {
+//       color: black;
+//     }
+//   }
+
+//   &__logo {
+//     height: 35px;
+//     border: none;
+//     box-shadow: none;
+//   }
+// }

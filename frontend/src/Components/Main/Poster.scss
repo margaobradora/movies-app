@@ -1,0 +1,67 @@
+@import "../../index.scss";
+
+.poster {
+  position: relative;
+  //@extend: 4px dotted blue;
+
+  &__img {
+    margin-bottom: 10px;
+    //border: 4px dotted orange;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--main-color);
+      -ms-transform: scale(1.1); /* IE 9 */
+      -webkit-transform: scale(1.1); /* Safari 3-8 */
+      transform: scale(1.1);
+      transition: 0.7s ease;
+    }
+  }
+
+  &__like {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2;
+    color: red;
+    border: none;
+    transform: scale(1.2);
+    transition: 0.7s ease;
+  }
+  &:hover {
+    cursor: pointer;
+    //color: var(--light-color);
+  }
+}
+
+.unfavorited {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2;
+  color: var(--main-color);
+  border: none;
+  transition: 0.7s ease;
+
+  &:hover {
+    cursor: pointer;
+    //color: var(--light-color);
+  }
+}
+//NASA
+// like {
+//   position: absolute;
+//   bottom:0;
+//   right:0;
+//   z-index:20;
+//   color:grey;
+// }
+
+// .like:hover {color:red;}
+
+// @media (max-width: 560px) {
+//   .poster__img {
+//     width: 100%;
+//     height: auto;
+//   }
+// }
