@@ -47,5 +47,3 @@ export default function Poster({ url, title, handleFav }) {
     </div>
   );
 }
-
-// ana

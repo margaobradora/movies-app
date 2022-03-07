@@ -4,19 +4,6 @@ import CategoriesCloud from "../Components/Main/CategoriesCloud";
 import { useAuthentication } from "../AuthenticationProvider";
 import { useState, useEffect } from "react";
 
-// export default function Main() {
-//   // Authentication
-//   const { authData } = useAuthentication();
-
-//   return (
-//     <div>
-//       <SearchBox></SearchBox>
-//       <CategoriesCloud></CategoriesCloud>
-//       <MovieGrid></MovieGrid>
-//     </div>
-//   );
-// }
-
 export default function Main() {
   // Authentication
   const { authData } = useAuthentication();
