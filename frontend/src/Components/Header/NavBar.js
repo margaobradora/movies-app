@@ -10,41 +10,64 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
   const signup = <FontAwesomeIcon className="signup" icon={faUserPlus} />;
   const signin = <FontAwesomeIcon className="signin" icon={faRightToBracket} />;
+  const logoutI = (
+    <FontAwesomeIcon className="signin" icon={faArrowRightFromBracket} />
+  );
   const heart = <FontAwesomeIcon className="signin" icon={faHeart} />;
 
-  const { authData } = useAuthentication();
+  // Hooks
+  const { authData, logout } = useAuthentication();
+  const navigate = useNavigate();
+
+  // Handlers
+
+  function handleLogoutClick() {
+    logout();
+    navigate("/", { replace: true });
+  }
 
   return (
     <ul className="navBar">
-      <li>
-        <NavLink className="navBar__item" activeClassName="active" to="/signup">
-          <span className="navBar__item__icon">{signup}</span>
-          <span>Sign up</span>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink className="navBar__item" activeClassName="active" to="/login">
-          <span className="navBar__item__icon">{signin}</span>
-          <span>Login</span>
-        </NavLink>
-      </li>
-      {/* {authData.username && (
+      {!authData && (
         <li>
-          <NavLink
-            className="navBar__item"
-            activeClassName="active"
-            to="/favorites"
-          >
-            <span className="navBar__item__icon">{heart}</span>
+          <NavLink className="nav__item" to="/signup">
+            <span className="nav__item__icon">{signup}</span>
+            <span>Sign Up</span>
+          </NavLink>
+        </li>
+      )}
+      {!authData && (
+        <li>
+          <NavLink className="nav__item" to="/login">
+            <span className="nav__item__icon">{signin}</span>
+            <span>Login</span>
+          </NavLink>
+        </li>
+      )}
+      {authData && (
+        <li>
+          <NavLink className="nav__item" to="/favorites">
+            <span className="nav__item__icon">{heart}</span>
             <span>Favorites</span>
           </NavLink>
         </li>
-      )} */}
+      )}
+      {authData && (
+        <li>
+          <span onClick={handleLogoutClick} className="nav__item">
+            <span className="nav__item__icon">{logoutI}</span>
+            <span>Logout</span>
+          </span>
+        </li>
+      )}
     </ul>
   );
 }

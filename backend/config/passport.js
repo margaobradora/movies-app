@@ -7,17 +7,17 @@ const customFields = {
   passwordField: "password",
 };
 
-const verifyCallback = (email, password, done) => {
-  User.findOne({ email: email }, function (err, user) {
-    if (err) {
-      return done(err);
+const verifyCallback = function (email, password, done) {
+  User.findOne({ email }, function (error, user) {
+    if (error) {
+      return done(error);
     }
-
     if (!user) {
       return done(null, false, {
         message: `No user found with email <${email}>`,
       });
     }
+
     return !user.validPassword(password)
       ? done(null, false, { message: "Wrong password" })
       : done(null, user);
@@ -31,7 +31,10 @@ passport.serializeUser(function (user, done) {
 });
 
 passport.deserializeUser(function (id, done) {
-  User.findById(id, function (err, user) {
-    done(err, user);
+  console.log("User id", id);
+
+  User.find((error, result) => console.log(result));
+  User.findById(id, function (error, user) {
+    done(error, user);
   });
 });

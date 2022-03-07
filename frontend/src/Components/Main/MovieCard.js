@@ -20,3 +20,16 @@ export default function MovieCard() {
     );
   });
 }
+
+// // Ana
+
+// export default function MovieCard({ movie }) {
+//   return (
+//     <li className="MovieCard" key={movie.title}>
+//       <Poster url={movie.poster} title={movie.title}></Poster>
+//       <Title title={movie.title}></Title>
+//       <Categories category={movie.category}></Categories>
+//       <Rating rating={movie.rating}></Rating>
+//     </li>
+// //   );
+// }

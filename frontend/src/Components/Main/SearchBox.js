@@ -1,21 +1,14 @@
 import "./SearchBox.scss";
-import React, { useState } from "react";
 
-export default function Search() {
-  const [input, setInput] = useState("");
-
-  const handleInputChange = (e) => {
-    setInput(e.target.value);
-  };
-
+export default function Search({ handleInputChange, handleSubmitSearch }) {
   return (
     <div className="search">
       <input
         type="text"
         onChange={handleInputChange}
+        onKeyDown={handleSubmitSearch}
         className="search__input"
         name="searchInput"
-        value={input}
         placeholder="search..."
       ></input>
     </div>
