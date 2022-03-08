@@ -14,7 +14,7 @@ export default function Main() {
 
   // Fetching movies
   function fetchMovies() {
-    fetch("http://localhost:4000/api/movies")
+    fetch("/api/movies")
       .then((response) => response.json())
       .then((data) => {
         setMovies(data.movies);
@@ -36,15 +36,12 @@ export default function Main() {
   async function handleSubmitSearch(event) {
     if (event.key === "Enter") {
       const title = input;
-      const response = await fetch(
-        `http://localhost:4000/api/movies/search?title=${title}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch(`/api/movies/search?title=${title}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       const data = await response.json();
       const searchedMovie = data.movies;
