@@ -1,7 +1,6 @@
 const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
-const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const connectDB = require("./config/db");
 const passport = require("passport");
@@ -18,11 +17,11 @@ const authRouter = require("./routes/auth");
 const { connect } = require("http2");
 
 const app = express();
-app.use;
-(function (req, res, next) {
+
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Credentials", true);
   res.header("Access-Control-Allow-Origin", req.headers.origin);
-  res.header("Access-Control-Alllow-Methods", GET, PUT, POST, DELETE);
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
   res.header(
     "Access-Control-Allow-Headers",
     "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept"
@@ -32,8 +31,9 @@ app.use;
 
 app.use(
   cors({
+    allowedHeaders: ["Origin, X-Requested-With, Content-Type, Accept"],
     credentials: true,
-    origin: ["http://localhost:3000"],
+    origin: [],
   })
 );
 
@@ -48,7 +48,6 @@ require("./config/passport");
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
@@ -69,7 +68,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render("error");
+  res.json({ err });
 });
 
 /**

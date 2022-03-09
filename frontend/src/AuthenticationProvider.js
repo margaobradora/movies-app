@@ -1,24 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
+
 export const AuthenticationContext = React.createContext("");
 
 const AuthenticationProvider = ({ children }) => {
   const [authData, setAuthData] = useState({});
 
-  useEffect(() => {
-    getLoggedUser();
-  }, []);
-
-  const login = (data) => {
-    setAuthData({ data });
-  };
-
-  const logout = () => {
-    setAuthData("");
-  };
-
   async function getLoggedUser() {
     const response = await fetch(`/api/auth/getuser`, {
       method: "GET",
+      // The following also for favorite url, for authenticated urls
       credentials: "include",
       headers: {
         Accept: "application/json",
@@ -32,6 +22,19 @@ const AuthenticationProvider = ({ children }) => {
       return null;
     }
   }
+
+  useEffect(() => {
+    getLoggedUser();
+    // eslint-disable-next-line
+  }, []);
+
+  const login = (data) => {
+    setAuthData({ data });
+  };
+
+  const logout = () => {
+    setAuthData("");
+  };
 
   const value = {
     authData,

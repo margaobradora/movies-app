@@ -66,8 +66,6 @@ exports.register = (req, res, next) => {
 };
 
 exports.getUser = (req, res, next) => {
-  console.log(req.headers);
-  console.log(req.isAuthenticated());
   if (!req.isAuthenticated()) {
     res.status(401);
     res.send();

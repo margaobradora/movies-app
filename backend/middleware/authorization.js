@@ -2,5 +2,5 @@ exports.isAllowed = (req, res, next) => {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.send("<h1>Access Denied</h1>");
+  res.status(401).send("<h1>Access Denied</h1>");
 };

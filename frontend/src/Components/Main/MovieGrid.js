@@ -4,8 +4,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownAZ } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
 
-export default function MovieGrid({ favorites, movies }) {
+export default function MoviesGrid({
+  movies,
+  addToFavoriteMovies,
+  isLoading,
+  handleSortClick,
+}) {
+  // Hooks
   const location = useLocation();
+
+  // Icon
   const sort = <FontAwesomeIcon icon={faArrowDownAZ} />;
 
   return (
@@ -15,6 +23,7 @@ export default function MovieGrid({ favorites, movies }) {
           {location.pathname === "/favorites" ? "My Favorites" : "All Movies"}
         </h2>
         <h4
+          onClick={handleSortClick}
           className={
             location.pathname === "/favorites"
               ? "hidden"
@@ -25,25 +34,17 @@ export default function MovieGrid({ favorites, movies }) {
           <span> {sort}</span>
         </h4>
       </div>
-      <ul className="grid__movies">
-        {movies.map(function (movie) {
-          return <MovieCard key={movie.title} movie={movie}></MovieCard>;
-        })}
-      </ul>
-
-      {/* <ul className="grid__movies">
-        <MovieCard></MovieCard>
-      </ul> */}
+      {movies && (
+        <ul className={isLoading ? "loader" : "grid__movies"}>
+          {movies.map((movie) => (
+            <MovieCard
+              key={movie.title}
+              addToFavoriteMovies={addToFavoriteMovies}
+              movie={movie}
+            ></MovieCard>
+          ))}
+        </ul>
+      )}
     </div>
   );
-}
-
-// ANA
-
-{
-  /* <ul className='grid__movies'>
-				{movies.map(function (movie) {
-					return <MovieCard key={movie.title} movie={movie}></MovieCard>;
-				})}
-			</ul> */
 }
