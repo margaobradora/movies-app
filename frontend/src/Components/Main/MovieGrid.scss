@@ -36,3 +36,27 @@
     margin: 0;
   }
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  font-size: 45px;
+  display: inline-block;
+  text-align: center;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twist-up {
+  to {
+    transform: rotateX(360deg);
+  }
+}

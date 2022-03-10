@@ -19,7 +19,9 @@ exports.addToFavorites = (req, res, next) => {
   let user = req.user;
   let movieId = req.body._id;
 
-  user.favorites.push(movieId);
+  if (!user.favorites.includes(movieId)) {
+    user.favorites.push(movieId);
+  }
 
   user.save(function (error) {
     if (error) {

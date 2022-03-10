@@ -36,6 +36,7 @@ export default function MoviesGrid({
       </div>
       {movies && (
         <ul className={isLoading ? "loader" : "grid__movies"}>
+          {isLoading && <i>📼</i>}
           {movies.map((movie) => (
             <MovieCard
               key={movie.title}
