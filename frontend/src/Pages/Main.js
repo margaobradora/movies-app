@@ -3,22 +3,28 @@ import MovieGrid from "../Components/Main/MovieGrid";
 import CategoriesCloud from "../Components/Main/CategoriesCloud";
 import { useAuthentication } from "../AuthenticationProvider";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Main() {
-  // Authentication
+  // Hooks
   const { authData } = useAuthentication();
+  const navigate = useNavigate();
 
   // State
+  const [isLoading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]); // Initial fetch
   const [filterMovies, setFilterMovies] = useState([]); // Afterwards
+  const [input, setInput] = useState("");
 
   // Fetching movies
   function fetchMovies() {
+    setLoading(true);
     fetch("/api/movies")
       .then((response) => response.json())
       .then((data) => {
         setMovies(data.movies);
         setFilterMovies(data.movies);
+        setLoading(false);
       });
   }
 
@@ -26,35 +32,20 @@ export default function Main() {
     fetchMovies();
   }, []);
 
-  const [input, setInput] = useState("");
-
   // Handlers
   const handleInputChange = (e) => {
     setInput(e.target.value);
   };
 
-  async function handleSubmitSearch(event) {
-    if (event.key === "Enter") {
-      const title = input;
-      const response = await fetch(`/api/movies/search?title=${title}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      const data = await response.json();
-      const searchedMovie = data.movies;
-      const titleSearchedMovie = searchedMovie[0].title;
-
-      if (response.status === 200) {
-        const newMovies = [...movies];
-        setFilterMovies(
-          newMovies.filter((movie) => movie.title === titleSearchedMovie)
-        );
-      }
-    }
-  }
+  const handleSubmitSearch = () => {
+    const searchedTitle = input.toLowerCase();
+    const newMovies = [...movies];
+    setFilterMovies(
+      newMovies.filter((movie) =>
+        movie.title.toLowerCase().includes(searchedTitle)
+      )
+    );
+  };
 
   const handleGenreClick = (genre) => {
     const newMovies = [...movies];
@@ -63,10 +54,27 @@ export default function Main() {
       setFilterMovies(newMovies.filter((movie) => movie.category === genre));
     }
   };
+
   const handleSortClick = () => {
     const sortedMovies = [...movies];
+
     setFilterMovies(sortedMovies.sort((a, b) => (a.title > b.title ? 1 : -1)));
   };
+
+  function addToFavoriteMovies(id) {
+    if (!authData) {
+      navigate("/login", { replace: true });
+    }
+
+    fetch("/api/user/favorites", {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ _id: id }),
+    });
+  }
 
   return (
     <div>
@@ -78,8 +86,10 @@ export default function Main() {
         movies={movies}
         handleGenreClick={handleGenreClick}
       ></CategoriesCloud>
-
+      {authData}
       <MovieGrid
+        addToFavoriteMovies={addToFavoriteMovies}
+        isLoading={isLoading}
         handleSortClick={handleSortClick}
         movies={filterMovies}
       ></MovieGrid>

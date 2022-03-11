@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "./style.scss";
-import { useLocation, Link, useNavigate } from "react-router-dom";
-import Page from "../Page";
-import Title from "../Title";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { useAuthentication } from "../AuthenticationProvider";
+
+import "./style.scss";
 
 export default function Login() {
   // State
@@ -45,8 +44,6 @@ export default function Login() {
       body: JSON.stringify(data),
     });
 
-    console.log(response);
-
     if (response.status === 200) {
       login({ email: data.email });
       navigate(from, { replace: true });
@@ -54,9 +51,9 @@ export default function Login() {
   }
 
   return (
-    <div class="container">
+    <div className="container">
       <div class="container__form">
-        <form class="form">
+        <form className="form">
           <input
             type="email"
             placeholder="email"
