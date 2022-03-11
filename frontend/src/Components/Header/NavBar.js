@@ -16,7 +16,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
-  const signup = <FontAwesomeIcon className="signup" icon={faUserPlus} />;
+  const register = <FontAwesomeIcon className="register" icon={faUserPlus} />;
   const signin = <FontAwesomeIcon className="signin" icon={faRightToBracket} />;
   const logoutI = (
     <FontAwesomeIcon className="signin" icon={faArrowRightFromBracket} />
@@ -38,9 +38,9 @@ export default function NavBar() {
     <ul className="navBar">
       {!authData && (
         <li>
-          <NavLink className="nav__item" to="/signup">
-            <span className="nav__item__icon">{signup}</span>
-            <span>Sign Up</span>
+          <NavLink className="nav__item" to="/register">
+            <span className="nav__item__icon">{register}</span>
+            <span>Register</span>
           </NavLink>
         </li>
       )}

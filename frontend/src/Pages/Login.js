@@ -74,7 +74,7 @@ export default function Login() {
           <button onClick={handleLoginClick}>login</button>
           <p class="input__message">
             No account?
-            <Link to="/signup"> Get one here!</Link>
+            <Link to="/register"> Get one here!</Link>
           </p>
         </form>
       </div>

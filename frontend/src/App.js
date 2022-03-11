@@ -9,7 +9,7 @@ import {
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Main from "./Pages/Main";
-import SignUp from "./Pages/SignUp";
+import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 
 import AuthenticationProvider from "./AuthenticationProvider";
@@ -21,7 +21,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/favorites" element={<Main />} />
         </Routes>
