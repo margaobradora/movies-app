@@ -5,7 +5,7 @@ import { faArrowDownAZ } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
 
 export default function MoviesGrid({
-  movies,
+  movies = [],
   addToFavoriteMovies,
   isLoading,
   handleSortClick,

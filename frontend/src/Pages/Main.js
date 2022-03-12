@@ -86,7 +86,9 @@ export default function Main() {
         movies={movies}
         handleGenreClick={handleGenreClick}
       ></CategoriesCloud>
-      {authData}
+
+      {authData?.name}
+      {/* authData és un objecte llavors necessito posarli el ? perq si es undefined no peti al accedir a la movies.app */}
       <MovieGrid
         addToFavoriteMovies={addToFavoriteMovies}
         isLoading={isLoading}

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const crypto = require("crypto");
 
 const userSchema = new Schema({
   email: {
@@ -20,7 +21,12 @@ userSchema.methods.generateHashPassword = function (password) {
     .toString("hex");
 };
 
-userSchema.methods.validPassword = function (password) {};
+userSchema.methods.validPassword = function (password) {
+  let hashToVerify = crypto
+    .pbkdf2Sync(password, this.salt, 1000, 64, `sha512`)
+    .toString(`hex`);
+  return this.hash === hashToVerify;
+};
 
 const User = mongoose.model("User", userSchema);
 

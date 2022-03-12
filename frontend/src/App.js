@@ -16,21 +16,21 @@ import AuthenticationProvider from "./AuthenticationProvider";
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header></Header>
+      <AuthenticationProvider>
+        <Router>
+          <Header></Header>
 
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/favorites" element={<Main />} />
-        </Routes>
-        <Footer></Footer>
-      </Router>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/favorites" element={<Main />} />
+          </Routes>
+          <Footer></Footer>
+        </Router>
+      </AuthenticationProvider>
     </div>
   );
 }
 
 export default App;
-
-// al MAIN ficaré les ROUTES
