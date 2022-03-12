@@ -1,4 +1,3 @@
-//import movies from "../../movies.json";
 import "./Categories.scss";
 
 export default function CategoriesCloud({ handleCategoryClick, movies }) {
@@ -20,7 +19,7 @@ export default function CategoriesCloud({ handleCategoryClick, movies }) {
         );
       })}
       <span onClick={() => handleCategoryClick()} className="categories__tag">
-        XXXX
+        ALL MOVIES
       </span>
     </>
   );

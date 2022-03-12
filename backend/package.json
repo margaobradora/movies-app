@@ -5,7 +5,11 @@
 
 	"private": true,
 	"scripts": {
-		"start": "nodemon ./app.js"
+		"start": "nodemon ./app.js",
+		"install:client:deps": "cd ../frontend && npm i && cd ../backend",
+		"build": "npm run instal:client:deps && npm build:client && npm run copy:files",
+		"build:client": "cd ../frontend  && npm run build && cd ../backend",
+		"copy:files": "rm -rf ./public && mkdir ./public && cp -Rv ../frontend/build/* ./public"
 	},
 	"dependencies": {
 		"connect-mongo": "^4.6.0",
