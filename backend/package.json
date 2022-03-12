@@ -7,7 +7,7 @@
 	"scripts": {
 		"start": "nodemon ./app.js",
 		"install:client:deps": "cd ../frontend && npm i && cd ../backend",
-		"build": "npm run instal:client:deps && npm build:client && npm run copy:files",
+		"build": "npm run install:client:deps && npm run build:client && npm run copy:files",
 		"build:client": "cd ../frontend  && npm run build && cd ../backend",
 		"copy:files": "rm -rf ./public && mkdir ./public && cp -Rv ../frontend/build/* ./public"
 	},
