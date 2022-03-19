@@ -60,3 +60,65 @@ i {
     transform: rotateX(360deg);
   }
 }
+
+// ANA
+
+// @import "../../index.scss";
+
+// .grid {
+//   margin: 0 5rem 0 5rem;
+//   padding-bottom: 50px;
+
+//   &__movies {
+//     margin: 0;
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, 210px);
+//     gap: 20px;
+//     padding: 10px 0 10px 0;
+//     justify-content: center;
+//   }
+
+//   &__header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+
+//     &__sort {
+//       cursor: pointer;
+
+//       &__button {
+//         margin-left: 10px;
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 560px) {
+//   .grid__movies {
+//     grid-template-columns: 100%;
+//   }
+// }
+
+// .loader {
+//   display: flex;
+//   justify-content: center;
+// }
+
+// i {
+//   font-size: 45px;
+//   display: inline-block;
+//   text-align: center;
+//   animation: spin 1s infinite linear;
+// }
+
+// @keyframes spin {
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// @keyframes twist-up {
+//   to {
+//     transform: rotateX(360deg);
+//   }
+// }

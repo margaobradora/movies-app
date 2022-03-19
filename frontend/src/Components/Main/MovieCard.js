@@ -5,9 +5,15 @@ import Categories from "./Categories";
 import "./MovieCard.scss";
 import { useLocation } from "react-router-dom";
 
-export default function MovieCard({ addToFavoriteMovies, movie }) {
-  // Hooks;
+export default function MovieCard({
+  addToFavoriteMovies,
+  deleteFromFavorites,
+  isActive,
+  movie,
+}) {
+  // Hooks
   const location = useLocation();
+
   return (
     <li
       className="MovieCard"
@@ -21,6 +27,8 @@ export default function MovieCard({ addToFavoriteMovies, movie }) {
         id={movie._id}
         url={movie.poster}
         addToFavoriteMovies={addToFavoriteMovies}
+        deleteFromFavorites={deleteFromFavorites}
+        isActive={isActive}
         title={movie.title}
       ></Poster>
       <Title title={movie.title}></Title>

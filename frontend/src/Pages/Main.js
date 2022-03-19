@@ -1,3 +1,5 @@
+// ANA
+
 import SearchBox from "../Components/Main/SearchBox";
 import MovieGrid from "../Components/Main/MovieGrid";
 import CategoriesCloud from "../Components/Main/CategoriesCloud";
@@ -55,10 +57,23 @@ export default function Main() {
     }
   };
 
-  const handleSortClick = () => {
+  const handleSortClickAZ = () => {
     const sortedMovies = [...movies];
-
     setFilterMovies(sortedMovies.sort((a, b) => (a.title > b.title ? 1 : -1)));
+  };
+
+  const handleSortClickZA = () => {
+    const sortedMovies = [...movies];
+    setFilterMovies(sortedMovies.sort((a, b) => (a.title > b.title ? -1 : 1)));
+  };
+
+  const handleSortClickRandom = () => {
+    const sortedMovies = [...movies];
+    setFilterMovies(
+      sortedMovies.sort(function () {
+        return Math.random() - 0.5;
+      })
+    );
   };
 
   function addToFavoriteMovies(id) {
@@ -92,7 +107,9 @@ export default function Main() {
       <MovieGrid
         addToFavoriteMovies={addToFavoriteMovies}
         isLoading={isLoading}
-        handleSortClick={handleSortClick}
+        handleSortClickAZ={handleSortClickAZ}
+        handleSortClickZA={handleSortClickZA}
+        handleSortClickRandom={handleSortClickRandom}
         movies={filterMovies}
       ></MovieGrid>
     </div>

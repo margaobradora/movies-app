@@ -34,3 +34,22 @@ exports.addToFavorites = (req, res, next) => {
     }
   });
 };
+
+//@access private
+exports.deleteFavorite = (req, res, next) => {
+  let user = req.user;
+  let movieId = req.params.id;
+
+  user.favorites.pull(movieId);
+
+  user.save(function (error) {
+    if (error) {
+      next(error);
+    } else {
+      res.status(202).json({
+        success: true,
+        message: `Delete movie with id: ${movieId}`,
+      });
+    }
+  });
+};

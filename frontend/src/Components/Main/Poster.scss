@@ -48,3 +48,38 @@
     //color: var(--light-color);
   }
 }
+
+// // ANA
+
+// @import '../../index.scss';
+
+// .poster {
+// 	position: relative;
+
+// 	&__img {
+// 		margin-bottom: 15px;
+// 		width: 200px;
+// 		height: 300px;
+// 	}
+
+// 	&__like {
+// 		position: absolute;
+// 		bottom: 25px;
+// 		right: 10px;
+// 		z-index: 1;
+// 		color: var(--main-color);
+// 		border: none;
+// 		cursor: pointer;
+// 	}
+// }
+
+// .hidden {
+// 	display: none;
+// }
+
+// @media (max-width: 560px) {
+// 	.poster__img {
+// 		width: 100%;
+// 		height: auto;
+// 	}
+// }

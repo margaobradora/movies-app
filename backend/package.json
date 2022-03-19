@@ -2,13 +2,12 @@
 {
 	"name": "movies-api",
 	"version": "0.0.0",
-
 	"private": true,
 	"scripts": {
 		"start": "node ./app.js",
-		"install:client:deps": "cd ../frontend && npm i && cd ../backend",
 		"build": "npm run install:client:deps && npm run build:client && npm run copy:files",
-		"build:client": "cd ../frontend  && npm run build && cd ../backend",
+		"build:client": "cd ../frontend && npm run build && cd ../backend",
+		"install:client:deps": "cd ../frontend && npm i && cd ../backend",
 		"copy:files": "rm -rf ./public && mkdir ./public && cp -Rv ../frontend/build/* ./public"
 	},
 	"dependencies": {

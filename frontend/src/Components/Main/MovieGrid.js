@@ -1,20 +1,30 @@
 import MovieCard from "./MovieCard";
 import "./MovieGrid.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDownAZ } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowDownAZ,
+  faArrowUpZA,
+  faShuffle,
+} from "@fortawesome/free-solid-svg-icons";
+
 import { useLocation } from "react-router-dom";
 
 export default function MoviesGrid({
-  movies = [],
+  movies,
   addToFavoriteMovies,
+  deleteFromFavorites,
   isLoading,
-  handleSortClick,
+  handleSortClickAZ,
+  handleSortClickZA,
+  handleSortClickRandom,
 }) {
   // Hooks
   const location = useLocation();
 
   // Icon
-  const sort = <FontAwesomeIcon icon={faArrowDownAZ} />;
+  const sortAZ = <FontAwesomeIcon icon={faArrowDownAZ} />;
+  const sortZA = <FontAwesomeIcon icon={faArrowUpZA} />;
+  const sortRandom = <FontAwesomeIcon icon={faShuffle} />;
 
   return (
     <div className="grid">
@@ -23,15 +33,30 @@ export default function MoviesGrid({
           {location.pathname === "/favorites" ? "My Favorites" : "All Movies"}
         </h2>
         <h4
-          onClick={handleSortClick}
           className={
             location.pathname === "/favorites"
               ? "hidden"
               : "grid__header__sort "
           }
         >
-          Sort
-          <span> {sort}</span>
+          <span
+            className="grid__header__sort__button"
+            onClick={handleSortClickAZ}
+          >
+            {sortAZ}
+          </span>
+          <span
+            className="grid__header__sort__button"
+            onClick={handleSortClickZA}
+          >
+            {sortZA}
+          </span>
+          <span
+            className="grid__header__sort__button"
+            onClick={handleSortClickRandom}
+          >
+            {sortRandom}
+          </span>
         </h4>
       </div>
       {movies && (
@@ -41,6 +66,7 @@ export default function MoviesGrid({
             <MovieCard
               key={movie.title}
               addToFavoriteMovies={addToFavoriteMovies}
+              deleteFromFavorites={deleteFromFavorites}
               movie={movie}
             ></MovieCard>
           ))}
@@ -48,4 +74,76 @@ export default function MoviesGrid({
       )}
     </div>
   );
+}
+
+
+// ANA 
+
+import MovieCard from './MovieCard';
+import './MoviesGrid.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDownAZ, faArrowUpZA, faShuffle } from '@fortawesome/free-solid-svg-icons';
+import { useTheme } from '../../ThemeContext';
+import { useLocation } from 'react-router-dom';
+
+export default function MoviesGrid({
+	movies,
+	addToFavoriteMovies,
+	deleteFromFavorites,
+	isLoading,
+	handleSortClickAZ,
+	handleSortClickZA,
+	handleSortClickRandom,
+}) {
+	// Hooks
+	const location = useLocation();
+
+	// Theme
+	const theme = useTheme();
+	const style = {
+		color: theme === 'white' ? 'black' : 'white',
+	};
+
+	// Icon
+	const sortAZ = <FontAwesomeIcon icon={faArrowDownAZ} />;
+	const sortZA = <FontAwesomeIcon icon={faArrowUpZA} />;
+	const sortRandom = <FontAwesomeIcon icon={faShuffle} />;
+
+	return (
+		<div className='grid'>
+			<div className='grid__header'>
+				<h2 style={style} className='grid__header__title'>
+					{location.pathname === '/favorites' ? 'My Favorites' : 'All Movies'}
+				</h2>
+				<h4
+					style={style}
+					className={
+						location.pathname === '/favorites' ? 'hidden' : 'grid__header__sort '
+					}>
+					<span className='grid__header__sort__button' onClick={handleSortClickAZ}>
+						{sortAZ}
+					</span>
+					<span className='grid__header__sort__button' onClick={handleSortClickZA}>
+						{sortZA}
+					</span>
+					<span className='grid__header__sort__button' onClick={handleSortClickRandom}>
+						{sortRandom}
+					</span>
+				</h4>
+			</div>
+			{movies.length === 0 && !isLoading && <span>You have no favorite movies</span>}
+			{movies && (
+				<ul className={isLoading ? 'loader' : 'grid__movies'}>
+					{isLoading && <i>📼</i>}
+					{movies.map(movie => (
+						<MovieCard
+							key={movie.title}
+							addToFavoriteMovies={addToFavoriteMovies}
+							deleteFromFavorites={deleteFromFavorites}
+							movie={movie}></MovieCard>
+					))}
+				</ul>
+			)}
+		</div>
+	);
 }
